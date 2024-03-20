@@ -1,0 +1,135 @@
+@layer components {
+  button,
+  button:focus {
+    @apply outline-none;
+  }
+
+  button:disabled {
+    @apply opacity-75;
+    @apply cursor-not-allowed;
+  }
+
+  a.btn {
+    text-align: center;
+    @apply inline-flex items-center justify-center rounded;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-3 py-2;
+    @apply font-medium text-primary-500;
+    @apply text-base tracking-wide;
+    @apply focus:outline-none;
+    @apply rounded text-sm;
+    @apply transition duration-300 ease-in-out;
+    @apply min-h-[38px];
+  }
+
+  .primary {
+    @apply text-white bg-primary-500;
+    @apply hover:bg-primary-400 focus:bg-primary-400;
+  }
+
+  .focus-primary {
+    @apply bg-primary-500;
+  }
+
+  .success {
+    @apply text-white bg-green-700;
+    @apply hover:bg-green-600 focus:bg-green-600;
+  }
+
+  .focus-success {
+    @apply bg-green-600;
+  }
+
+  .danger {
+    @apply text-white bg-red-600;
+    @apply hover:bg-red-600 focus:bg-red-500;
+  }
+
+  .focus-danger {
+    @apply bg-red-600;
+  }
+
+  .warning {
+    @apply text-white bg-yellow-600;
+    @apply hover:bg-yellow-500 focus:bg-yellow-500;
+  }
+
+  .focus-warning {
+    @apply bg-yellow-500;
+  }
+
+  .info {
+    @apply text-white bg-cyan-600;
+    @apply hover:bg-cyan-500 focus:bg-cyan-500;
+  }
+
+  .focus-info {
+    @apply bg-cyan-600;
+  }
+
+  .light {
+    @apply bg-gray-100 text-gray-700;
+    @apply hover:bg-gray-200 hover:text-gray-700 focus:bg-gray-200 focus:text-gray-700;
+  }
+
+  .focus-light {
+    @apply bg-gray-100 text-gray-700;
+  }
+
+  .bordered {
+    @apply bg-white text-gray-700;
+    @apply border border-slate-200;
+  }
+
+  .focus-bordered {
+    @apply bg-white;
+  }
+
+  .dark {
+    @apply text-white bg-gray-800;
+    @apply hover:bg-gray-600 focus:bg-gray-600;
+  }
+
+  .focus-dark {
+    @apply bg-gray-600;
+  }
+
+  .line {
+    @apply !px-0 font-semibold text-inherit;
+    @apply hover:underline focus:underline;
+  }
+
+  .focus-line {
+    @apply underline;
+  }
+
+  .active-link {
+    @apply bg-primary-200/20 text-primary-500;
+  }
+
+  .link {
+    @apply bg-none text-neutral-500 hover:text-neutral-600;
+  }
+
+  .xs {
+    @apply rounded px-1.5 py-1 text-xs;
+    @apply min-h-[24px];
+  }
+
+  .sm {
+    @apply rounded px-2 py-1 text-sm;
+    @apply min-h-[32px];
+  }
+
+  .md {
+    @apply rounded text-sm;
+    @apply min-h-[40px];
+  }
+
+  .lg {
+    @apply rounded-md px-4 py-2 text-base;
+    @apply min-h-[48px];
+  }
+}

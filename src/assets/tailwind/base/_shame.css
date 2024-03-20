@@ -1,0 +1,32 @@
+.uploadcare--page {
+  @apply h-full w-full;
+}
+
+.uploadcare--button_primary {
+  @apply text-white cursor-pointer border-none !bg-primary-500;
+  @apply hover:!bg-primary-700 focus:!bg-primary-700 focus:outline-none;
+}
+
+.uploadcare--menu__item_current {
+  @apply !bg-white !fill-primary-500 !text-primary-500 outline-none;
+}
+
+.uploadcare--menu__item_current .uploadcare--icon {
+  @apply !fill-primary-500;
+}
+
+.uploadcare--icon {
+  @apply !fill-slate-600;
+}
+
+.uploadcare--menu__item {
+  @apply font-medium text-slate-600 outline-none hover:text-slate-600 focus:shadow-none;
+}
+
+.uploadcare--mouse-focused {
+  @apply focus:outline-none;
+}
+
+.uploadcare--dialog__close {
+  @apply cursor-pointer focus:outline-none;
+}

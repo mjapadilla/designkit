@@ -1,0 +1,75 @@
+@layer components {
+  textarea {
+    resize: none;
+  }
+
+  .form-container {
+    @apply relative space-y-px rounded-md;
+    @apply transition duration-300 ease-in-out;
+  }
+
+  .form-label {
+    @apply space-x-1 text-xs font-semibold text-slate-700;
+  }
+
+  .form-input {
+    @apply text-sm;
+    @apply disabled:bg-gray-100;
+    @apply placeholder-slate-500;
+    @apply border border-slate-300;
+    @apply transition duration-300 ease-in-out;
+    @apply outline-none focus:outline-none focus:ring-0;
+    @apply bg-white h-10 w-full rounded-md p-3;
+    @apply hover:border-slate-600 focus:border-slate-600 group-hover:border-slate-600;
+  }
+
+  .form-checkbox {
+    @apply border border-slate-500;
+    @apply hover:border-slate-600 focus:ring-primary-500 group-hover:border-slate-600;
+    @apply cursor-pointer rounded text-primary-500;
+    &:disabled {
+      @apply cursor-not-allowed;
+    }
+  }
+
+  .form-placeholder {
+    @apply transition duration-300 ease-in-out;
+    @apply text-sm leading-none text-slate-500;
+  }
+
+  .form-input-error {
+    @apply group-hover:border-red-600;
+    @apply border-red-600 text-red-500 placeholder-red-600;
+    @apply focus:border-red-600 focus:text-red-600 focus:outline-none focus:ring-0;
+  }
+
+  .form-error-badge {
+    @apply absolute -bottom-2 right-2 flex rounded bg-red-50 px-2 text-xs text-red-500;
+  }
+}
+
+/* React Phone Input */
+.react-tel-input .selected-flag:before {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.react-tel-input .country-list {
+  @apply !max-h-80 sm:!w-80 lg:!w-96 xs:!w-64;
+}
+
+.react-tel-input .country-list .search {
+  @apply !py-3 !pl-1 !pr-3;
+}
+
+.react-tel-input .country-list .search .search-box {
+  @apply h-10;
+}
+
+.react-tel-input .country-list .search-box {
+  @apply bg-white text-form-active flex w-full items-center rounded border border-gray-300 p-3 text-sm focus:outline-none focus:ring-0;
+}
+
+.react-tel-input .country-list .no-entries-message {
+  @apply !px-4;
+}

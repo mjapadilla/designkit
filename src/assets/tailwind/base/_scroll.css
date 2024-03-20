@@ -1,0 +1,47 @@
+@layer base {
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-50;
+    border-radius: 2px;
+  }
+
+  ::-webkit-scrollbar {
+    @apply h-1 w-1;
+    border-radius: 1px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-500;
+    border-radius: 15px;
+  }
+
+  #style-1::-webkit-scrollbar-track {
+    border-radius: 1px;
+    @apply bg-transparent;
+  }
+
+  #style-1::-webkit-scrollbar {
+    @apply w-1;
+  }
+
+  #style-1::-webkit-scrollbar-thumb {
+    @apply bg-gray-500/60;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 896px) and (orientation: landscape) {
+    #root-wrapper {
+      @apply h-full overflow-y-auto;
+    }
+
+    #mobile-navigation {
+      @apply block;
+    }
+
+    #sidebar-navigation {
+      @apply overflow-y-auto;
+    }
+
+    #_table-container {
+      @apply min-h-[600px];
+    }
+  }
+}

@@ -1,0 +1,5 @@
+build
+node_modules
+tailwind.config.js
+src/reportWebVitals.js
+.github

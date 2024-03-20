@@ -1,0 +1,62 @@
+@layer components {
+  .gt-table-container {
+    @apply flex h-full w-full overflow-hidden rounded border;
+  }
+
+  .gt-table-inner-container {
+    @apply bg-white relative overflow-auto;
+  }
+
+  .gt-table {
+    @apply relative w-full table-fixed;
+  }
+
+  .gt-table-head-center {
+    @apply z-20;
+
+    & thead {
+      @apply divide-y;
+
+      & tr {
+        @apply divide-x;
+
+        & th {
+          @apply text-center;
+        }
+      }
+    }
+  }
+
+  .gt-table-head {
+    @apply text-left text-xs uppercase tracking-wider text-primary-500;
+    @apply sticky top-0 overflow-hidden rounded-t bg-gray-100;
+    @apply z-10;
+
+    box-shadow: 0px 0.5px 0px 0px rgba(229, 229, 229, var(--tw-border-opacity));
+    -webkit-box-shadow: 0px 0.5px 0px 0px
+      rgba(229, 229, 229, var(--tw-border-opacity));
+    -moz-box-shadow: 0px 0.5px 0px 0px
+      rgba(229, 229, 229, var(--tw-border-opacity));
+  }
+
+  .gt-table-head th {
+    @apply px-4 py-2 font-bold;
+  }
+
+  .gt-table-body td {
+    @apply px-4 py-2.5;
+  }
+
+  .gt-table-row {
+    @apply border-t border-gray-200;
+    @apply bg-white cursor-pointer items-center text-sm;
+  }
+
+  .gt-table-row-hover {
+    @apply transform-none cursor-pointer duration-100 ease-in-out hover:bg-gray-100 hover:bg-opacity-70;
+  }
+
+  .gt-table-row-selected {
+    @apply bg-gray-100;
+  }
+}

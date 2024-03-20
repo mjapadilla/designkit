@@ -1,0 +1,107 @@
+#!/bin/bash
+
+allowedGitmojis=(
+  "art"
+  "zap"
+  "fire"
+  "bug"
+  "ambulance"
+  "sparkles"
+  "adhesive_bandage"
+  "memo"
+  "rocket"
+  "lipstick"
+  "tada"
+  "white_check_mark"
+  "lock"
+  "closed_lock_with_key"
+  "bookmark"
+  "children_crossing"
+  "rotating_light"
+  "construction"
+  "green_heart"
+  "arrow_down"
+  "arrow_up"
+  "pushpin"
+  "green_heart"
+  "construction_worker"
+  "chart_with_upwards_trend"
+  "recycle"
+  "heavy_plus_sign"
+  "heavy_minus_sign"
+  "wrench"
+  "hammer"
+  "twisted_rightwards_arrows"
+  "globe_with_meridians"
+  "pencil2"
+  "poop"
+  "rewind"
+  "twisted_rightwards_arrows"
+  "package"
+  "alien"
+  "truck"
+  "page_facing_up"
+  "boom"
+  "bento"
+  "wheelchair"
+  "bulb"
+  "beers"
+  "speech_balloon"
+  "card_file_box"
+  "loud_sound"
+  "mute"
+  "busts_in_silhouette"
+  "children-_crossing"
+  "building_construction"
+  "iphone"
+  "clown_face"
+  "egg"
+  "see_no_evil"
+  "camera_flash"
+  "alembic"
+  "mag"
+  "label"
+  "seedling"
+  "triangular_flag_on_post"
+  "goal_net"
+  "animation"
+  "wastebasket"
+  "passport_control"
+  "adhesive_bandage"
+  "monocle_face"
+  "coffin"
+  "test_tube"
+  "necktie"
+  "stethoscope"
+  "bricks"
+  "technologist"
+  "money_with_wings"
+  "thread"
+  "safety_vest"
+  "rotating_light"
+)
+
+allowedGitmojisRegex="^:($(IFS="|"; echo "${allowedGitmojis[*]}")):"
+
+if ! grep -qE "$allowedGitmojisRegex" "$1"; then
+  echo -e "\033[31mError: Invalid Gitmoji title in commit message.\033[0m" >&2
+  echo -e "Commit title must start with one of the following Gitmoji titles. Type \033[1;33mgitmoji -c\033[0m" >&2
+  echo "Visit https://gitmoji.dev/ to view all allowed gitmoji titles" >&2
+  echo "Gitmoji is not installed yet?. Type npm i -g gitmoji-cli first." >&2
+  exit 1
+fi
+
+if ! head -1 "$1" | grep -qE "^.{1,150}$"; then
+    echo "Aborting commit. Your commit message is too long." >&2
+    exit 1
+fi
+
+#If all checks pass.
+echo -e "\033[1;32mCommit message checks passed. Commit successful!\033[0m"
+echo
+echo -e "If you encounter error of \033[31mcommit-msg is not executable\033[0m go to your terminal and type \033[1;33mchmod +x .husky/commit-msg\033[0m on mac"
+echo -e "or \033[1;33mgit update-index --chmod=+x .husky/commit-msg\033[0m on windows"
+echo
+echo
+
+exit 0

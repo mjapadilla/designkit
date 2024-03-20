@@ -1,0 +1,8 @@
+@layer components {
+  .modal-title {
+    @apply flex w-full items-center text-lg font-semibold;
+  }
+  .modal-title-description {
+    @apply flex w-full items-center text-sm font-normal;
+  }
+}
