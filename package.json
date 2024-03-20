@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "watch-tsc": "tsc --skipLibCheck --watch --noEmit",
-    "watch:style": "TAILWIND_MODE=watch npx tailwindcss -w src/assets/tailwind/tailwind.css -o src/assets/tailwind/index.css",
-    "build:style": "NODE_ENV=production npx tailwindcss -i src/assets/tailwind/tailwind.css -o src/assets/tailwind/index.css --verbose",
+    "watch:style": "TAILWIND_MODE=watch npx tailwindcss -w src/assets/css/tailwind.css -o src/assets/css/styles.css",
+    "build:style": "NODE_ENV=production npx tailwindcss -i src/assets/css/tailwind.css -o src/assets/css/styles.css --verbose",
     "start:react": "vite --host",
     "start": "npm-run-all -p watch-tsc start:react watch:style",
     "build": "tsc && vite build:style",

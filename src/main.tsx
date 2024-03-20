@@ -16,7 +16,7 @@ import QueryProvider, { AxiosInterceptor, ErrorBoundry } from 'services';
 
 import SessionProvider from 'context/session/_SessionProvider.tsx';
 
-import 'assets/tailwind/index.css';
+import 'assets/css/styles.css';
 
 import App from './App.tsx';
 
