@@ -6,10 +6,11 @@
   "scripts": {
     "watch-tsc": "tsc --skipLibCheck --watch --noEmit",
     "watch:style": "TAILWIND_MODE=watch npx tailwindcss -w src/assets/css/tailwind.css -o src/assets/css/styles.css",
-    "build:style": "NODE_ENV=production npx tailwindcss -i src/assets/css/tailwind.css -o src/assets/css/styles.css --verbose",
+    "build:style": "NODE_ENV=production npx tailwindcss -i src/assets/css/tailwind.css -o src/assets/css/styles.css --verbose --minify",
     "start:react": "vite --host",
     "start": "npm-run-all -p watch-tsc start:react watch:style",
-    "build": "tsc && vite build:style",
+    "build:react": "tsc && vite build",
+    "build": "npm-run-all -p build:react build:style",
     "preview": "vite preview --host",
     "pretty": "prettier --write \"**/*.+(json|ts|tsx|css|md)\"",
     "prepare": "husky install",

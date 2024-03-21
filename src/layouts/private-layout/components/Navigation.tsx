@@ -35,8 +35,8 @@ function Navigation({ module_code }: IProps) {
               'group z-20 my-1 flex items-center gap-5 py-[2px]',
               'ease-out-in transition duration-200',
               {
-                'bg-primary-600 text-slate-50': isActive,
-                'text-slate-50 hover:text-primary-500': !isActive,
+                'bg-primary-600 text-white-50': isActive,
+                'text-white-50 hover:text-primary-500': !isActive,
               },
               {
                 'pointer-events-none': isActive,
@@ -65,7 +65,7 @@ function Navigation({ module_code }: IProps) {
   );
 
   return (
-    <div className="flex h-full overflow-hidden border-r border-gray-200 bg-white-50">
+    <div className="flex h-full overflow-hidden border-r border-gray-200 bg-black-500">
       <div className="flex h-full w-full flex-col overflow-hidden py-6">
         <div className="flex flex-col px-4">
           <div className="mx-auto flex flex-shrink-0">
@@ -90,7 +90,7 @@ function Navigation({ module_code }: IProps) {
                 return (
                   <React.Fragment key={k}>
                     <div>
-                      <h4 className="mb-1 px-5 text-xs font-bold uppercase tracking-tight text-gray-500 lg:mb-2">
+                      <h4 className="mb-1 px-5 text-xs font-bold uppercase tracking-tight text-white-50 lg:mb-2">
                         {group_name}
                       </h4>
                       {i &&
@@ -106,8 +106,8 @@ function Navigation({ module_code }: IProps) {
                                   'group z-20 my-1 flex items-center gap-4 py-[2px]',
                                   'ease-out-in transform transition duration-200',
                                   {
-                                    'bg-primary-500 text-slate-50': isActive,
-                                    'text-slate-50 hover:text-primary-500':
+                                    'bg-primary-500 text-white-50': isActive,
+                                    'text-white-50 hover:text-primary-500':
                                       !isActive,
                                   },
                                   {
@@ -118,7 +118,7 @@ function Navigation({ module_code }: IProps) {
                               >
                                 <div
                                   className={classNames(
-                                    'z-20 h-9 w-1 rounded-r bg-slate-50',
+                                    'z-20 h-9 w-1 rounded-r bg-white-50',
                                     'ease-out-in transform transition duration-200',
                                     {
                                       'opacity-100': isActive && !hasGroup,
@@ -169,7 +169,7 @@ function Navigation({ module_code }: IProps) {
                           );
                         })}
                     </div>
-                    <div className="mx-6 border-b border-neutral-200 last:hidden" />
+                    <div className="mx-6 border-b border-white-50 last:hidden" />
                   </React.Fragment>
                 );
               })}

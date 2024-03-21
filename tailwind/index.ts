@@ -4,17 +4,20 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 import plugin from 'tailwindcss/plugin';
 
 import button from './_button';
+import card from './_card';
 import color from './_colors';
 import fonts from './_fonts';
+import htmlBody from './_html-body';
+import pageLayout from './_page-layout';
 
 const cutomPlugins = plugin(function ({
   addBase,
   addUtilities,
   addComponents,
 }) {
-  addBase(fonts);
+  addBase([htmlBody, fonts]);
   addUtilities({});
-  addComponents(button);
+  addComponents([button, card, pageLayout]);
 });
 
 export default {

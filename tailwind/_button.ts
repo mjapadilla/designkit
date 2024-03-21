@@ -1,10 +1,10 @@
 const button = {
   '.btn': {
+    '@apply rounded': {},
     '@apply px-3 py-1': {},
     '@apply font-medium text-primary-500': {},
     '@apply text-base tracking-wide': {},
     '@apply focus:!ring focus:!ring-blue-500': {},
-    '@apply rounded': {},
     '@apply transition duration-300 ease-in-out': {},
   },
   '.btn.disabled': {
@@ -12,7 +12,7 @@ const button = {
     '@apply !text-disabled hover:!bg-interface-disabled': {},
   },
   '.btn.loading': {
-    '@apply ring ring-blue-500': {},
+    '@apply ring ring-blue-500 cursor-wait': {},
   },
   // SIZE
   '.btn.small': {
@@ -57,68 +57,68 @@ const button = {
     '@apply hover:bg-inverse-hovered focus:bg-inverse-pressed': {},
   },
   '.btn.brand-outline': {
-    '@apply bg-brand-subtle text-on-brand-subtle': {},
     '@apply ring-1 ring-primary-400': {},
+    '@apply bg-brand-subtle text-on-brand-subtle': {},
     '@apply hover:bg-brand-hovered-subtle focus:bg-brand-pressed-subtle': {},
   },
   '.btn.info-outline': {
-    '@apply bg-info-subtle text-on-info-subtle': {},
     '@apply ring-1 ring-blue-400': {},
+    '@apply bg-info-subtle text-on-info-subtle': {},
     '@apply hover:bg-info-hovered-subtle focus:bg-info-pressed-subtle': {},
   },
   '.btn.success-outline': {
-    '@apply bg-success-subtle text-on-success-subtle': {},
     '@apply ring-1 ring-green-400': {},
+    '@apply bg-success-subtle text-on-success-subtle': {},
     '@apply hover:bg-success-hovered-subtle focus:bg-success-pressed-subtle':
       {},
   },
   '.btn.warning-outline': {
-    '@apply bg-warning-subtle text-on-warning-subtle': {},
     '@apply ring-1 ring-orange-400': {},
+    '@apply bg-warning-subtle text-on-warning-subtle': {},
     '@apply hover:bg-warning-hovered-subtle focus:bg-warning-pressed-subtle':
       {},
   },
   '.btn.danger-outline': {
-    '@apply bg-danger-subtle text-on-danger-subtle': {},
     '@apply ring-1 ring-red-400': {},
+    '@apply bg-danger-subtle text-on-danger-subtle': {},
     '@apply hover:bg-danger-hovered-subtle focus:bg-danger-pressed-subtle': {},
   },
   // FOCUS
-  'btn.brand-focus': {
-    '@apply bg-brand-pressed text-white-50': {},
+  '.btn.brand-focus': {
+    '@apply !bg-brand-pressed text-white-50': {},
   },
-  'btn.info-focus': {
-    '@apply bg-info-pressed text-white-50': {},
+  '.btn.info-focus': {
+    '@apply !bg-info-pressed text-white-50': {},
   },
-  'btn.success-focus': {
-    '@apply bg-success-pressed text-white-50': {},
+  '.btn.success-focus': {
+    '@apply !bg-success-pressed text-white-50': {},
   },
-  'btn.warning-focus': {
-    '@apply bg-warning-pressed text-white-50': {},
+  '.btn.warning-focus': {
+    '@apply !bg-warning-pressed text-white-50': {},
   },
-  'btn.danger-focus': {
-    '@apply bg-danger-pressed text-white-50': {},
+  '.btn.danger-focus': {
+    '@apply !bg-danger-pressed text-white-50': {},
   },
-  'btn.light-focus': {
-    '@apply bg-interface-hovered': {},
+  '.btn.light-focus': {
+    '@apply !bg-interface-hovered': {},
   },
-  'btn.dark-focus': {
-    '@apply bg-inverse-pressed text-white-50': {},
+  '.btn.dark-focus': {
+    '@apply !bg-inverse-pressed text-white-50': {},
   },
   '.btn.brand-outline-focus': {
-    '@apply bg-brand-pressed-subtle text-on-brand-subtle': {},
+    '@apply !bg-brand-pressed-subtle text-on-brand-subtle': {},
   },
   '.btn.info-outline-focus': {
-    '@apply bg-info-pressed-subtle text-on-info-subtle': {},
+    '@apply !bg-info-pressed-subtle text-on-info-subtle': {},
   },
   '.btn.success-outline-focus': {
-    '@apply bg-success-pressed-subtle text-on-success-subtle': {},
+    '@apply !bg-success-pressed-subtle text-on-success-subtle': {},
   },
   '.btn.warning-outline-focus': {
-    '@apply bg-warning-pressed-subtle text-on-warning-subtle': {},
+    '@apply !bg-warning-pressed-subtle text-on-warning-subtle': {},
   },
   '.btn.danger-outline-focus': {
-    '@apply bg-danger-pressed-subtle text-on-danger-subtle': {},
+    '@apply !bg-danger-pressed-subtle text-on-danger-subtle': {},
   },
 };
 

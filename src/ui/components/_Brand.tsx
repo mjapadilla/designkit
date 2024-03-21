@@ -3,23 +3,22 @@ import { Link } from 'react-router-dom';
 
 import { Logo } from 'assets/images';
 
-type TColorType = 'default' | 'white';
 interface IProps {
   imgClassName?: string;
   labelClassName?: string;
   logo?: string;
   url?: string;
-  type?: TColorType;
+  type?: keyof typeof renderLogo;
 }
 
-const renderLogo: Record<TColorType, string> = {
-  default: Logo,
+const renderLogo = {
+  black: Logo,
   white: Logo,
 };
 
 function Brand({
   url = '/',
-  type = 'default',
+  type = 'black',
   imgClassName = 'h-10 w-auto',
   labelClassName = 'text-2xl font-semibold',
 }: IProps) {
@@ -28,7 +27,14 @@ function Brand({
     <Link to={url}>
       <div className="flex items-center space-x-3">
         <img className={cn(imgClassName)} src={$logo} alt="designkit" />
-        <h4 className={labelClassName}>Design System</h4>
+        <h4
+          className={cn(labelClassName, {
+            'text-black-50': type === 'black',
+            'text-white-50': type === 'white',
+          })}
+        >
+          Design System
+        </h4>
       </div>
     </Link>
   );

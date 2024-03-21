@@ -102,7 +102,7 @@ function Button({
       const IconRight =
         typeof trailing === 'string' ? renderIcon[trailing] : undefined;
       return (
-        <div className="flex h-full items-center gap-1">
+        <div className="flex h-full items-center justify-center gap-1">
           {IconLeft ? (
             <IconLeft className={classNames(renderIconSize[size])} />
           ) : (
@@ -132,13 +132,17 @@ function Button({
       type="button"
       {...rest}
       disabled={rest?.disabled || isLoading}
-      className={cn('btn', renderSize[size], [renderColor[color]], {
-        '!cursor-wait': isLoading,
-        [renderFocus[color]]: focus || isLoading,
-        disabled: rest?.disabled && !isLoading,
-        loading: isLoading,
-        [String(rest?.className)]: rest?.className,
-      })}
+      className={cn(
+        'btn',
+        {
+          loading: isLoading,
+          [String(renderFocus[color])]: focus || isLoading,
+          disabled: rest?.disabled && !isLoading,
+          [String(rest?.className)]: rest?.className,
+        },
+        renderColor[color],
+        renderSize[size]
+      )}
     >
       {isLoading && withLoader ? 'Loading...' : renderLabel}
     </button>

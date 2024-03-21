@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="w-full bg-gradient-to-r from-neutral-800 to-neutral-900">
       <div className="container mx-auto flex h-full w-full space-x-14 p-5">
-        <div className="m-auto w-full max-w-md rounded-xl bg-white-50 p-8">
+        <div className="card m-auto w-full max-w-md p-8">
           <div className="flex justify-center">
             <Brand />
           </div>
